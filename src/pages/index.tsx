@@ -1,4 +1,5 @@
 import { Geist } from "next/font/google";
+import { useState } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -6,36 +7,89 @@ const geistSans = Geist({
 });
 
 export default function Home() {
+  const [email, setEmail] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    try {
+      const response = await fetch("/api/sub", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setEmail("");
+      }
+    } catch (error) {
+      console.error("Error submitting email:", error);
+    }
+  };
+
   return (
     <div
-      className={`${geistSans.className} min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800`}
+      className={`${geistSans.className} min-h-screen flex items-center justify-center`}
+      style={{ backgroundColor: "#26336A" }}
     >
       <div className="text-center p-8 max-w-md">
         <div className="mb-8">
-          <div className="w-16 h-16 mx-auto mb-4 bg-blue-500 rounded-full flex items-center justify-center">
-            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
+          <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+            <img src="/crosslogo.png" alt="Logo" />
           </div>
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-            Сайт в разработке
+          <h1 className="text-3xl font-bold text-white mb-2">
+            17 сентября 2025 г.
           </h1>
-          <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Мы усердно работаем над созданием чего-то потрясающего. Скоро здесь появится новый сайт!
+          <p className="text-gray-300 mb-6">
+            Регистрация скоро откроется. Оставьте свой электронный адрес и мы
+            сообщим вам об открытии.
           </p>
         </div>
-        
-        <div className="space-y-4">
-          <div className="flex items-center justify-center space-x-2">
-            <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
-            <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
-            <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+
+        {isSubmitted ? (
+          <div className="space-y-4">
+            <div className="text-green-300 text-lg font-medium">
+              Спасибо! Мы уведомим вас об открытии регистрации.
+            </div>
           </div>
-          
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            Следите за обновлениями...
-          </p>
+        ) : (
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Введите ваш email"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
+              required
+            />
+            <button
+              type="submit"
+              className="w-full bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+            >
+              Сообщите мне
+            </button>
+          </form>
+        )}
+
+        <div className="mt-8 space-y-4">
+          <div className="flex items-center justify-center space-x-2">
+            <div className="w-2 h-2 bg-white rounded-full animate-bounce"></div>
+            <div
+              className="w-2 h-2 bg-white rounded-full animate-bounce"
+              style={{ animationDelay: "0.1s" }}
+            ></div>
+            <div
+              className="w-2 h-2 bg-white rounded-full animate-bounce"
+              style={{ animationDelay: "0.2s" }}
+            ></div>
+          </div>
+
+          <p className="text-sm text-gray-300">Следите за обновлениями...</p>
         </div>
       </div>
     </div>
