@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   Box,
   Grid,
@@ -18,11 +19,10 @@ const Footer: FC = () => {
     <Box
       id="footer"
       sx={{
-        backgroundColor: "#0461B5",
+        backgroundColor: "#FFFFFF",
       }}
     >
       <Grid
-        spacing={sm ? "0px" : "12px"}
         px={sm ? "64px" : "20px"}
         pb="36px"
         pt={sm ? "220px" : "260px"}
@@ -37,11 +37,11 @@ const Footer: FC = () => {
               position: "absolute",
               bottom: "40%",
             }}
-            src="/images/icons/logo_text.svg"
+            src="/images/description_logo.svg"
           ></Box>
         </Grid>
         <Grid item xs={sm ? 8 : 12}>
-          <Stack spacing="16px">
+          <Stack spacing="16px" px={!sm ? "0px" : "25px"}>
             <Stack
               spacing="30px"
               justifyContent={md ? "normal" : "center"}
@@ -51,21 +51,14 @@ const Footer: FC = () => {
                 <Box
                   height={md ? "55px" : sm ? "45px" : "25px"}
                   component="img"
-                  src="/images/icons/dsgm_white.svg"
+                  src="/images/icons/dep_blue.svg"
                 />
               </a>
               <a target="_blank" href="https://sport.moscow/">
                 <Box
                   height={md ? "55px" : sm ? "45px" : "25px"}
                   component="img"
-                  src="/images/icons/ms_white.svg"
-                />
-              </a>
-              <a target="_blank" href="https://mosgorsport.ru/">
-                <Box
-                  height={md ? "55px" : sm ? "45px" : "25px"}
-                  component="img"
-                  src="/images/icons/mgs_white.svg"
+                  src="/images/icons/mos_blue.svg"
                 />
               </a>
             </Stack>
@@ -74,11 +67,11 @@ const Footer: FC = () => {
                 maxWidth: sm ? undefined : "340px",
                 fontFamily: "Gotham Pro Bold",
                 fontSize: sm ? "32px" : "24px",
-                color: "#FFFFFF",
+                color: "#26336A",
                 lineHeight: sm ? "31px" : "23px",
               }}
             >
-              Легкоатлетический забег «На старт»
+              Массовый забег «Кросс нации»
             </Typography>
 
             <Stack spacing="16px">
@@ -87,19 +80,19 @@ const Footer: FC = () => {
                 alignItems="center"
                 spacing="20px"
                 direction="row"
-                href="mailto:pr@mosgorsport.ru"
+                href="mailto:cross.sport.mos@mail.ru"
               >
                 <Box component="img" src="/images/icons/mail.svg" />
                 <Typography
                   sx={{
                     fontFamily: "Gotham Pro Medium",
                     fontSize: sm ? "24px" : "20px",
-                    color: "#FFFFFF",
+                    color: "#26336A",
                     lineHeight: sm ? "23px" : "19px",
                     textDecoration: "underline",
                   }}
                 >
-                  pr@mosgorsport.ru
+                  cross.sport.mos@mail.ru
                 </Typography>
               </Stack>
 
@@ -108,7 +101,7 @@ const Footer: FC = () => {
                   <Box component="img" src="/images/icons/vk.svg" />
                 </a>
                 <a href="https://t.me/mosgorsportmoscow">
-                  <Box component="img" src="/images/icons/telegram.svg" />
+                  <Box component="img" src="/images/icons/tg.svg" />
                 </a>
               </Stack>
             </Stack>
@@ -121,14 +114,12 @@ const Footer: FC = () => {
           sx={{
             fontFamily: "Gotham Pro Light",
             fontSize: sm ? "24px" : "16px",
-            color: "#FFFFFF",
+            color: "#26336A",
             lineHeight: sm ? "23px" : "15px",
             textAlign: "justify",
           }}
         >
-          Государственное бюджетное учреждение города Москвы «Московская
-          дирекция по развитию массового спорта» Департамента спорта города
-          Москвы (ГБУ «МОСГОРСПОРТ» Москомспорта)
+          2025 г. АНО “Спортивная лаборатория”
         </Typography>
       </Box>
     </Box>

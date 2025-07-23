@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   Box,
   Button,
@@ -7,9 +8,6 @@ import {
   useTheme,
 } from "@mui/material";
 import { FC, useEffect, useState } from "react";
-import { PublicResourcesResponse } from "@/models/yandex-disk";
-
-import axios from "axios";
 
 const Photo: FC = () => {
   const theme = useTheme();
@@ -43,25 +41,15 @@ const Photo: FC = () => {
   return (
     <Box
       sx={{
-        backgroundImage: "linear-gradient(to bottom, #88D8FC, #F89C43)",
+        bgcolor: "#FFFFFF",
       }}
     >
-      <Box
-        id="photo"
-        sx={{
-          backgroundImage: "url(/images/photo.svg)",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          aspectRatio: md ? "1170/1125" : "480/600",
-        }}
-      >
+      <Box paddingY="32px" id="photo">
         <Typography
           sx={{
-            mb: "46px",
             textAlign: "center",
             fontFamily: "Mossport",
-            color: "#0461B5",
+            color: "#E7352E",
             fontSize: md ? "128px" : "96px",
             lineHeight: md ? "128px" : "96px",
           }}
@@ -89,7 +77,7 @@ const Photo: FC = () => {
             .slice(0, md ? 12 : sm ? 6 : 3)}
         </Grid>
 
-        <Box
+        {/* <Box
           sx={{
             alignItems: "center",
             display: "flex",
@@ -116,7 +104,7 @@ const Photo: FC = () => {
           >
             ФОТО
           </Button>
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   );

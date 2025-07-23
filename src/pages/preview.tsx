@@ -33,7 +33,7 @@ export default function Preview() {
           <Guide />
           {/* <Park /> */}
           <Photo />
-          <Box
+          {/* <Box
             sx={{
               backgroundImage: "url(/images/block.svg)",
               backgroundRepeat: "no-repeat",
@@ -41,7 +41,7 @@ export default function Preview() {
               backgroundSize: "cover",
               minHeight: 297,
             }}
-          />
+          /> */}
           <Footer />
         </Container>
       )}

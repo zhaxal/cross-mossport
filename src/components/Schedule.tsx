@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { handleScrollToElement } from "@/utils/scroll";
 import {
   Box,
@@ -23,8 +24,7 @@ const TableRow: FC<TableRowProps> = ({ time, description }) => {
   return (
     <Box
       sx={{
-        background:
-          "linear-gradient(301.38deg, #0461B5 -7.89%, #0098D7 151.15%)",
+        background: "#26336A",
         boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
         p: "8px 0px",
       }}
@@ -70,7 +70,6 @@ const Schedule: FC = () => {
   return (
     <Box
       sx={{
-        backgroundImage: "linear-gradient(to bottom, #F89C43, #F89C43)",
         pb: "80px",
       }}
     >
@@ -88,7 +87,7 @@ const Schedule: FC = () => {
             mb: "28px",
             textAlign: "center",
             fontFamily: "Mossport",
-            color: "#2E2E2E",
+            color: "#E7352E",
             fontSize: medium ? "128px" : "96px",
             lineHeight: medium ? "128px" : "96px",
           }}
@@ -96,7 +95,7 @@ const Schedule: FC = () => {
           ПРОГРАММА
         </Typography>
 
-        <Typography
+        {/* <Typography
           sx={{
             mb: "40px",
             textAlign: "center",
@@ -107,7 +106,7 @@ const Schedule: FC = () => {
           }}
         >
           Стадион «Авангард»
-        </Typography>
+        </Typography> */}
 
         <Stack
           mb="40px"
@@ -151,7 +150,7 @@ const Schedule: FC = () => {
           <TableRow time="13:30" description="Закрытие мероприятия" />
         </Stack>
 
-        <Typography
+        {/* <Typography
           sx={{
             mb: "40px",
             textAlign: "center",
@@ -192,16 +191,13 @@ const Schedule: FC = () => {
             description="Церемония награждения участников дистанции 3 км"
           />
           <TableRow time="12:20" description="Разминка" />
-          <TableRow
-            time="12:30"
-            description="Старт на дистанцию 5 км"
-          />
+          <TableRow time="12:30" description="Старт на дистанцию 5 км" />
           <TableRow
             time="13:10"
             description="Церемония награждения участников дистанции 5 км"
           />
           <TableRow time="13:30" description="Закрытие мероприятия" />
-        </Stack>
+        </Stack> */}
 
         <Stack
           pb={medium ? "0px" : "80px"}
@@ -211,7 +207,7 @@ const Schedule: FC = () => {
           direction={matches ? "row" : "column-reverse"}
           spacing={matches ? "10px" : "10px"}
         >
-          <Link
+          {/* <Link
             target="_blank"
             href="https://disk.yandex.ru/d/rfFIi_cmXKRnrw"
             sx={{
@@ -223,12 +219,12 @@ const Schedule: FC = () => {
             }}
           >
             Положение о мероприятии
-          </Link>
+          </Link> */}
           <Button
+            fullWidth
             sx={{
               mx: matches ? "56px" : "0px",
-              background:
-                "linear-gradient(301.38deg, #B81D1D -7.89%, #E7352E 151.15%)",
+              background: "#E7352E",
               borderRadius: "8px",
               px: "40px",
               py: "20px",
@@ -246,7 +242,7 @@ const Schedule: FC = () => {
                 color: "#FFFFFF",
               }}
             >
-              РЕЗУЛЬТАТЫ
+              ЗАРЕГИСТРИРОВАТЬСЯ
             </Typography>
           </Button>
         </Stack>

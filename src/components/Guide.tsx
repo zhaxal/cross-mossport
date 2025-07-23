@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   Box,
   Grid,
@@ -98,15 +99,7 @@ const GuideRow: FC<GuideRowProps> = ({ title, text, icon, position, step }) => {
         alignItems="center"
         justifyContent="center"
       >
-        <Box
-          sx={{
-            backgroundColor: "#0461B5",
-          }}
-          width="100%"
-          height="auto"
-          component="img"
-          src={icon}
-        />
+        <Box width="100%" height="auto" component="img" src={icon} />
       </Grid>
     );
   };
@@ -138,18 +131,13 @@ const Guide: FC = () => {
   return (
     <Box
       sx={{
-        backgroundImage: "linear-gradient(to bottom, #0461B5, #60D0FF)",
+        bgcolor: "#26336A",
       }}
     >
       <Box
         id="guide"
         sx={{
-          paddingTop: "64px",
-          backgroundImage: "url(/images/guide.svg)",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          aspectRatio: `1170/${lg ? 2550 : 2800}`,
+          paddingY: "92px",
         }}
       >
         <Typography
@@ -157,7 +145,7 @@ const Guide: FC = () => {
             mb: "72px",
             textAlign: "center",
             fontFamily: "Mossport",
-            color: "#FFFFFF",
+            color: "#E7352E",
             fontSize: sm ? (md ? "128px" : "96px") : "48px",
             lineHeight: sm ? (md ? "128px" : "96px") : "48px",
           }}
@@ -183,8 +171,7 @@ const Guide: FC = () => {
                   color: "#FFFFFF",
                 }}
               >
-                Выберите один из пяти парков, где вы хотите пробежать, перейдите
-                на страницу регистрации и заполните анкету.
+                Перейдите на страницу регистрации и заполните анкету.
               </Typography>
             }
             icon="/images/icons/guide_icon1.svg"
@@ -208,9 +195,9 @@ const Guide: FC = () => {
                   допускающую к соревнованиям. Без нее вам организаторы не
                   разрешат участвовать в забеге.
                 </Typography>
+                <br />
 
                 <Link
-                  mt={1}
                   target="_blank"
                   href="https://drive.google.com/file/d/12hkCvpqXpFh3i3WzE4mJyAQkuuRc-o6Q/view?usp=sharing"
                   sx={{
@@ -221,8 +208,7 @@ const Guide: FC = () => {
                     textDecoration: "underline",
                   }}
                 >
-                  Более подробную информацию читайте в Положении о проведении
-                  мероприятия
+                  Подробнее о форме справки.
                 </Link>
               </>
             }
@@ -237,7 +223,7 @@ const Guide: FC = () => {
                 <Typography
                   component="p"
                   sx={{
-                    fontFamily: "Gotham Pro Regular",
+                    fontFamily: "Gotham Pro Medium",
                     fontSize: sm ? "20px" : "14px",
                     lineHeight: "120%",
                     color: "#FFFFFF",
@@ -246,11 +232,15 @@ const Guide: FC = () => {
                   В день забега в зоне регистрации предъявите оригиналы
                   документов:
                 </Typography>
-                <ul>
+                <ul
+                  style={{
+                    listStyleType: "circle",
+                  }}
+                >
                   <Typography
                     component="li"
                     sx={{
-                      fontFamily: "Gotham Pro Regular",
+                      fontFamily: "Gotham Pro Medium",
                       fontSize: sm ? "20px" : "14px",
                       lineHeight: "120%",
                       color: "#FFFFFF",
@@ -263,7 +253,7 @@ const Guide: FC = () => {
                   <Typography
                     component="li"
                     sx={{
-                      fontFamily: "Gotham Pro Regular",
+                      fontFamily: "Gotham Pro Medium",
                       fontSize: sm ? "20px" : "14px",
                       lineHeight: "120%",
                       color: "#FFFFFF",
@@ -277,7 +267,7 @@ const Guide: FC = () => {
                   <Typography
                     component="li"
                     sx={{
-                      fontFamily: "Gotham Pro Regular",
+                      fontFamily: "Gotham Pro Medium",
                       fontSize: sm ? "20px" : "14px",
                       lineHeight: "120%",
                       color: "#FFFFFF",
@@ -290,7 +280,7 @@ const Guide: FC = () => {
                 <Typography
                   component="p"
                   sx={{
-                    fontFamily: "Gotham Pro Regular",
+                    fontFamily: "Gotham Pro Medium",
                     fontSize: sm ? "20px" : "14px",
                     lineHeight: "120%",
                     color: "#FFFFFF",
@@ -358,11 +348,15 @@ const Guide: FC = () => {
                   borderRadius: "20px",
                 }}
               >
-                <ul>
+                <ul
+                  style={{
+                    listStyleType: "circle",
+                  }}
+                >
                   <Typography
                     component="li"
                     sx={{
-                      fontFamily: "Gotham Pro Regular",
+                      fontFamily: "Gotham Pro Medium",
                       fontSize: "20px",
                       lineHeight: "120%",
                       color: "#FFFFFF",
@@ -377,7 +371,7 @@ const Guide: FC = () => {
                   <Typography
                     component="li"
                     sx={{
-                      fontFamily: "Gotham Pro Regular",
+                      fontFamily: "Gotham Pro Medium",
                       fontSize: "20px",
                       lineHeight: "120%",
                       color: "#FFFFFF",
@@ -390,7 +384,7 @@ const Guide: FC = () => {
                   <Typography
                     component="li"
                     sx={{
-                      fontFamily: "Gotham Pro Regular",
+                      fontFamily: "Gotham Pro Medium",
                       fontSize: "20px",
                       lineHeight: "120%",
                       color: "#FFFFFF",
@@ -402,7 +396,7 @@ const Guide: FC = () => {
                   <Typography
                     component="li"
                     sx={{
-                      fontFamily: "Gotham Pro Regular",
+                      fontFamily: "Gotham Pro Medium",
                       fontSize: "20px",
                       lineHeight: "120%",
                       color: "#FFFFFF",
@@ -416,7 +410,7 @@ const Guide: FC = () => {
                   <Typography
                     component="li"
                     sx={{
-                      fontFamily: "Gotham Pro Regular",
+                      fontFamily: "Gotham Pro Medium",
                       fontSize: "20px",
                       lineHeight: "120%",
                       color: "#FFFFFF",
@@ -430,7 +424,7 @@ const Guide: FC = () => {
                   <Typography
                     component="li"
                     sx={{
-                      fontFamily: "Gotham Pro Regular",
+                      fontFamily: "Gotham Pro Medium",
                       fontSize: "20px",
                       lineHeight: "120%",
                       color: "#FFFFFF",
@@ -444,7 +438,7 @@ const Guide: FC = () => {
                   <Typography
                     component="li"
                     sx={{
-                      fontFamily: "Gotham Pro Regular",
+                      fontFamily: "Gotham Pro Medium",
                       fontSize: "20px",
                       lineHeight: "120%",
                       color: "#FFFFFF",
@@ -457,7 +451,7 @@ const Guide: FC = () => {
                   <Typography
                     component="li"
                     sx={{
-                      fontFamily: "Gotham Pro Regular",
+                      fontFamily: "Gotham Pro Medium",
                       fontSize: "20px",
                       lineHeight: "120%",
                       color: "#FFFFFF",
@@ -470,7 +464,7 @@ const Guide: FC = () => {
                   <Typography
                     component="li"
                     sx={{
-                      fontFamily: "Gotham Pro Regular",
+                      fontFamily: "Gotham Pro Medium",
                       fontSize: "20px",
                       lineHeight: "120%",
                       color: "#FFFFFF",
@@ -483,7 +477,7 @@ const Guide: FC = () => {
                   <Typography
                     component="li"
                     sx={{
-                      fontFamily: "Gotham Pro Regular",
+                      fontFamily: "Gotham Pro Medium",
                       fontSize: "20px",
                       lineHeight: "120%",
                       color: "#FFFFFF",
@@ -497,7 +491,7 @@ const Guide: FC = () => {
                   <Typography
                     component="li"
                     sx={{
-                      fontFamily: "Gotham Pro Regular",
+                      fontFamily: "Gotham Pro Medium",
                       fontSize: "20px",
                       lineHeight: "120%",
                       color: "#FFFFFF",
@@ -512,7 +506,7 @@ const Guide: FC = () => {
           </Grid>
         </Grid>
 
-        <Stack
+        {/* <Stack
           pt={!md ? "16px" : "42px"}
           px={md ? (lg ? "205px" : "100px") : "10px"}
           alignItems="center"
@@ -539,7 +533,7 @@ const Guide: FC = () => {
               mb: "172px",
             }}
           />
-        </Stack>
+        </Stack> */}
       </Box>
     </Box>
   );
