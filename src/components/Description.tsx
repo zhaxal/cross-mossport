@@ -27,7 +27,7 @@ const DescriptionDesktop: FC = () => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          aspectRatio: "1170/1595",
+          aspectRatio: "1170/815",
         }}
       >
         <Stack
@@ -49,28 +49,24 @@ const DescriptionDesktop: FC = () => {
                 fontWeight: 400,
               }}
             >
-              15 июня в 5 парках столицы пройдет забег для детей и взрослых на
-              дистанциях 500 м, 1 км, 3 км, 5 км. Подойдет как новичкам, которые
+              13 сентября 2025 года в Крылатском пройдет ассовый забег в рамках
+              Всероссийского дня бега “Кросс нации” для взрослых и детей на
+              дистанциях 1 км, 5 км и 10 км. Подойдет как новичкам, которые
               хотят поучаствовать в массовом состязании, так и любителям,
-              которые хотят подготовиться к марафонам. Для самых уверенных в
-              себе будет доступна дистанция в 10 км на флагманской площадке на
-              стадионе «Авангард». <br />
-              <br />
-              Все на старт!
+              которые хотят подготовиться к марафонам.
             </Typography>
             <Stack px="50px" justifyContent="center">
               <Button
                 onClick={handleScrollToElement("park")}
                 sx={{
                   position: "relative",
-                  background:
-                    "linear-gradient(90deg, #FFD324 0%, #FF8900 100%)",
+                  bgcolor: "#E7352E",
                   boxShadow: "0px 4px 0px rgba(0, 0, 0, 0.16)",
                   borderRadius: "8px",
                   fontFamily: "Gotham Pro Bold",
                   fontSize: large ? "18px" : "16px",
                   lineHeight: "152%",
-                  color: "#31313E",
+                  color: "#FFFFFF",
                   px: large ? "40px" : "20px",
                   py: large ? "20px" : "16px",
                   "& .MuiTouchRipple-root": {
@@ -79,46 +75,10 @@ const DescriptionDesktop: FC = () => {
                 }}
               >
                 РЕЗУЛЬТАТЫ
-                <Box
-                  sx={{ position: "absolute", top: "100%" }}
-                  width="100%"
-                  height="auto"
-                  component="img"
-                  src="/images/medal.svg"
-                />
               </Button>
             </Stack>
           </Box>
         </Stack>
-        <Box pt={large ? "180px" : "80px"} px={large ? "110px" : "40px"}>
-          <Typography
-            sx={{
-              maxWidth: large ? "473px" : "350px",
-              fontFamily: "Gotham Pro Bold",
-              fontSize: large ? "32px" : "24px",
-              color: "#0F2572",
-              lineHeight: large ? "32px" : "28px",
-            }}
-          >
-            Все участники получат дипломы и медаль финишера, а победители и
-            призеры - медали и памятные призы
-          </Typography>
-
-          <Link
-            target="_blank"
-            href="https://disk.yandex.ru/d/rfFIi_cmXKRnrw"
-            sx={{
-              fontFamily: "Gotham Pro Bold",
-              fontSize: "18px",
-              lineHeight: "152%",
-              color: "#0461B5",
-              textDecoration: "underline",
-            }}
-          >
-            <br />
-            Положение о мероприятии
-          </Link>
-        </Box>
       </Box>
     </Box>
   );

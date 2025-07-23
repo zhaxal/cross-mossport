@@ -50,7 +50,7 @@ const CustomMenuItem: FC<MenuItemProps> = ({ children, ...props }) => {
       sx={{
         fontFamily: "Mossport",
         fontSize: "32px",
-        color: "#FFFFFF",
+        color: "#26336A",
         lineHeight: "32px",
       }}
     >
@@ -76,6 +76,10 @@ const DesktopNavbar: FC = () => {
         yOffset;
       window.scrollTo({ top: y - 96, behavior: "smooth" });
     }
+    setAnchorEl(null);
+  };
+
+  const handleMenuClose = () => {
     setAnchorEl(null);
   };
 
@@ -113,7 +117,6 @@ const DesktopNavbar: FC = () => {
                 >
                   ПОЛОЖЕНИЕ
                 </Typography> */}
-                
 
                 <Typography
                   onClick={handleScrollToElement("distance")}
@@ -192,31 +195,20 @@ const DesktopNavbar: FC = () => {
               <IconButton
                 onClick={handleClick}
                 size="large"
-                sx={{ color: "#FFFFFF" }}
+                sx={{ color: "#26336A" }}
               >
                 <MenuIcon />
               </IconButton>
             </Stack>
-            <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
-              <CustomMenuItem
-                onClick={() => {
-                  const url = "https://disk.yandex.ru/d/rfFIi_cmXKRnrw";
-                  window.open(url, "_blank");
-                  setAnchorEl(null);
-                }}
-              >
-                ПОЛОЖЕНИЕ
-              </CustomMenuItem>
+            <Menu anchorEl={anchorEl} open={open} onClose={handleMenuClose}>
               <CustomMenuItem onClick={handleClose("distance")}>
-                ДИСТАНЦИИ
+                ПРОГРАММА
               </CustomMenuItem>
 
               <CustomMenuItem onClick={handleClose("guide")}>
                 УСЛОВИЯ
               </CustomMenuItem>
-              <CustomMenuItem onClick={handleClose("park")}>
-                ПЛОЩАДКИ
-              </CustomMenuItem>
+
               <CustomMenuItem onClick={handleClose("photo")}>
                 ФОТО
               </CustomMenuItem>

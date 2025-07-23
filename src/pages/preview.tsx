@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Cover from "@/components/Cover";
 import Description from "@/components/Description";
 import Distance from "@/components/Distance";
 import Footer from "@/components/Footer";
 import Guide from "@/components/Guide";
+import ImagePlace from "@/components/ImagePlace";
 import Navbar from "@/components/Navbar";
 import Park from "@/components/Park";
 import Photo from "@/components/Photo";
@@ -25,15 +27,20 @@ export default function Preview() {
       <CssBaseline />
       <Navbar />
       {matches && (
-        <Container maxWidth="lg">
+        <>
           <Cover />
-          <Description />
-          {/* <Distance /> */}
-          <Schedule />
-          <Guide />
-          {/* <Park /> */}
-          <Photo />
-          {/* <Box
+          <Container maxWidth="lg">
+            <Description />
+          </Container>
+          <ImagePlace />
+
+          <Container maxWidth="lg">
+            {/* <Distance /> */}
+            <Schedule />
+            <Guide />
+            {/* <Park /> */}
+            <Photo />
+            {/* <Box
             sx={{
               backgroundImage: "url(/images/block.svg)",
               backgroundRepeat: "no-repeat",
@@ -42,8 +49,9 @@ export default function Preview() {
               minHeight: 297,
             }}
           /> */}
-          <Footer />
-        </Container>
+            <Footer />
+          </Container>
+        </>
       )}
       {!matches && (
         <Box
@@ -53,20 +61,12 @@ export default function Preview() {
         >
           <Cover />
           <Description />
-          <Distance />
+
           <Schedule />
           <Guide />
-          <Park />
+
           <Photo />
-          <Box
-            sx={{
-              backgroundImage: "url(/images/block.svg)",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              minHeight: 297,
-            }}
-          />
+
           <Footer />
           {/* 
         

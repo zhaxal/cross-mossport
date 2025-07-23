@@ -26,11 +26,11 @@ const TableRow: FC<TableRowProps> = ({ time, description }) => {
       sx={{
         background: "#26336A",
         boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-        p: "8px 0px",
+        p: "8px 16px",
       }}
     >
       <Grid container>
-        <Grid item md={3} xs={12}>
+        <Grid item md={3} xs={12} alignContent={"center"}>
           <Typography
             sx={{
               fontFamily: matches ? "Gotham Pro Regular" : "Gotham Pro Bold",
@@ -49,7 +49,6 @@ const TableRow: FC<TableRowProps> = ({ time, description }) => {
               fontFamily: "Gotham Pro Regular",
               fontSize: "20px",
               lineHeight: "120%",
-              textAlign: matches ? "left" : "center",
               color: "#FFFFFF",
             }}
           >
@@ -114,40 +113,33 @@ const Schedule: FC = () => {
           spacing="8px"
         >
           <TableRow
-            time="08:00"
-            description="Начало выдачи стартовых номеров (до 12:00)"
+            time="09:00"
+            description="Начало выдачи стартовых номеров (до 11:45)"
           />
-          <TableRow time="08:50" description="Разминка" />
-          <TableRow time="09:00" description="Старт на дистанцию 10 км" />
           <TableRow
             time="10:00"
             description="Торжественное открытие соревнований"
           />
-          <TableRow
-            time="10:10"
-            description="Церемония награждения участников дистанции 10 км"
-          />
           <TableRow time="10:20" description="Разминка" />
-          <TableRow time="10:30" description="Старт на дистанцию 500 метров" />
+          <TableRow time="10:30" description="Старт на дистанцию 1 километр" />
           <TableRow time="10:50" description="Разминка" />
-          <TableRow time="11:00" description="Старт на дистанцию 1 км" />
+          <TableRow time="11:00" description="Старт на дистанцию 5 километров" />
           <TableRow
             time="11:20"
-            description="Церемония награждения участников дистанции 1 км"
+            description="Церемония награждения участников дистанции 1 километр"
           />
           <TableRow time="11:30" description="Разминка" />
-          <TableRow time="11:40" description="Старт на дистанцию 3 км" />
           <TableRow
             time="12:10"
-            description="Церемония награждения участников дистанции 3 км"
+            description="Церемония награждения участников дистанции 5 километра"
           />
           <TableRow time="12:20" description="Разминка" />
-          <TableRow time="12:30" description="Старт на дистанцию 5 км" />
+          <TableRow time="12:30" description="Старт на дистанцию 10 километров" />
           <TableRow
-            time="13:10"
-            description="Церемония награждения участников дистанции 5 км"
+            time="13:40"
+            description="Церемония награждения участников дистанции 10 километров"
           />
-          <TableRow time="13:30" description="Закрытие мероприятия" />
+          <TableRow time="13:50" description="Закрытие мероприятия" />
         </Stack>
 
         {/* <Typography

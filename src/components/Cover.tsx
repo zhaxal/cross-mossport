@@ -1,4 +1,4 @@
-import { Box, Stack, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Container, Stack, useMediaQuery, useTheme } from "@mui/material";
 import { FC } from "react";
 
 const Cover: FC = () => {
@@ -9,53 +9,66 @@ const Cover: FC = () => {
 
   return (
     <>
+      <Container maxWidth="lg">
+        <Box
+          sx={{
+            backgroundColor: "#0F2572",
+            minHeight: "96px",
+          }}
+        ></Box>
+      </Container>
       <Box
         sx={{
-          backgroundColor: "#0F2572",
-          minHeight: "96px",
+          backgroundColor: "#2A325A",
         }}
-      ></Box>
-      <Box
-        sx={{
-          backgroundColor: "#0F2572",
-          backgroundImage: "url(/images/cover.png)",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          aspectRatio: "480/320",
-        }}
-      ></Box>
-      <Stack
-        px={large ? "130px" : "16px"}
-        pt="16px"
-        spacing="30px"
-        justifyContent="center"
-        direction="row"
       >
-        <a target="_blank" href="https://mosgorsport.ru/">
+        <Container maxWidth="lg">
           <Box
-            height={matches ? "65px" : small ? "45px" : "25px"}
-            component="img"
-            src="/images/icons/mgs.svg"
-          />
-        </a>
+            sx={{
+              backgroundColor: "#0F2572",
+              backgroundImage: "url(/images/cover.png)",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              aspectRatio: "480/320",
+            }}
+          ></Box>
+        </Container>
+      </Box>
+      <Container maxWidth="lg">
+        <Stack
+          px={large ? "130px" : "16px"}
+          py="16px"
+          spacing="30px"
+          justifyContent="center"
+          alignItems="center"
+          direction="row"
+        >
+          <a target="_blank" href="https://mosgorsport.ru/">
+            <Box
+              height={matches ? "65px" : small ? "45px" : "25px"}
+              component="img"
+              src="/images/icons/mgs.svg"
+            />
+          </a>
 
-        <a target="_blank" href="https://sport.moscow">
-          <Box
-            height={matches ? "65px" : small ? "45px" : "25px"}
-            component="img"
-            src="/images/icons/ms.svg"
-          />
-        </a>
+          <a target="_blank" href="https://sport.moscow">
+            <Box
+              height={matches ? "65px" : small ? "45px" : "25px"}
+              component="img"
+              src="/images/icons/ms.svg"
+            />
+          </a>
 
-        {/* <a target="_blank" href="https://www.mos.ru/moskomsport/">
+          {/* <a target="_blank" href="https://www.mos.ru/moskomsport/">
           <Box
             height={matches ? "65px" : small ? "45px" : "25px"}
             component="img"
             src="/images/icons/dsgm.svg"
           />
         </a> */}
-      </Stack>
+        </Stack>
+      </Container>
     </>
   );
 };
