@@ -69,7 +69,7 @@ const Schedule: FC = () => {
   return (
     <Box
       sx={{
-        pb: "80px",
+        py: sm ? "80px" : "40px",
       }}
     >
       <Box
@@ -198,9 +198,9 @@ const Schedule: FC = () => {
         </Stack> */}
 
         <Stack
-          pb={medium ? "0px" : "80px"}
+
           justifyContent={matches ? "flex-end" : "centesdr"}
-          px={matches ? "210px" : "0px"}
+          px={matches ? "210px" : "20px"}
           alignItems="center"
           direction={matches ? "row" : "column-reverse"}
           spacing={matches ? "10px" : "10px"}

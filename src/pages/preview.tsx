@@ -2,6 +2,7 @@
 import Cover from "@/components/Cover";
 import Description from "@/components/Description";
 import Distance from "@/components/Distance";
+import Find from "@/components/Find";
 import Footer from "@/components/Footer";
 import Guide from "@/components/Guide";
 import ImagePlace from "@/components/ImagePlace";
@@ -49,6 +50,7 @@ export default function Preview() {
               minHeight: 297,
             }}
           /> */}
+            <Find />
             <Footer />
           </Container>
         </>
@@ -61,12 +63,13 @@ export default function Preview() {
         >
           <Cover />
           <Description />
+          <ImagePlace />
 
           <Schedule />
           <Guide />
 
           <Photo />
-
+          <Find />
           <Footer />
           {/* 
         

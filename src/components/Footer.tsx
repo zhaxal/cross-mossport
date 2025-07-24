@@ -96,10 +96,10 @@ const Footer: FC = () => {
               </Stack>
 
               <Stack alignItems="center" spacing="20px" direction="row">
-                <a href="https://vk.com/mosgorsportvk">
+                <a href="https://vk.com/moscowsportofficial">
                   <Box component="img" src="/images/icons/vk.svg" />
                 </a>
-                <a href="https://t.me/mosgorsportmoscow">
+                <a href="https://t.me/MoscowSportOfficial">
                   <Box component="img" src="/images/icons/tg.svg" />
                 </a>
               </Stack>
