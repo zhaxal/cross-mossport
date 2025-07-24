@@ -119,7 +119,7 @@ const DesktopNavbar: FC = () => {
                 </Typography> */}
 
                 <Typography
-                  onClick={handleScrollToElement("distance")}
+                  onClick={handleScrollToElement("schedule")}
                   sx={{
                     fontFamily: "Mossport",
                     fontSize: "32px",
