@@ -1,11 +1,4 @@
-import {
-  Box,
-  Grid,
-  Stack,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Box, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
 import { FC, SyntheticEvent, useState } from "react";
 import RegistrationAccordion from "./ui/RegistrationAccordion";
 import dynamic from "next/dynamic";
@@ -27,8 +20,6 @@ const Park: FC = () => {
       setMapLink(mapLink);
     };
 
-  const theme = useTheme();
-  const lg = useMediaQuery(theme.breakpoints.up("lg"));
   const md = useMediaQuery("(min-width:1100px)");
   const sm = useMediaQuery("(min-width:480px)");
 

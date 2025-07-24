@@ -1,18 +1,9 @@
-import {
-  Box,
-  Stack,
-  Typography,
-  StackProps,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
-import { FC } from "react";
+import { Box, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 const Video = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("md"));
   const medium = useMediaQuery("(min-width:1100px)");
-  const sm = useMediaQuery("(min-width:600px)");
 
   return (
     <Box

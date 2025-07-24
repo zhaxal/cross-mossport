@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Geist } from "next/font/google";
 import { useState } from "react";
 
