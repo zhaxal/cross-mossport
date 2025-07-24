@@ -137,7 +137,7 @@ const Guide: FC = () => {
       <Box
         id="guide"
         sx={{
-          paddingY: "92px",
+          paddingY: md ? "72px" : "40px",
         }}
       >
         <Typography
@@ -327,7 +327,7 @@ const Guide: FC = () => {
             position="right"
           />
 
-          <Grid mb={!md ? "120px" : "0px"} item xs={12}>
+          <Grid mb={md ? "120px" : "20px"} item xs={12}>
             <Stack spacing="10px">
               <Typography
                 sx={{

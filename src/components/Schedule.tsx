@@ -123,7 +123,10 @@ const Schedule: FC = () => {
           <TableRow time="10:20" description="Разминка" />
           <TableRow time="10:30" description="Старт на дистанцию 1 километр" />
           <TableRow time="10:50" description="Разминка" />
-          <TableRow time="11:00" description="Старт на дистанцию 5 километров" />
+          <TableRow
+            time="11:00"
+            description="Старт на дистанцию 5 километров"
+          />
           <TableRow
             time="11:20"
             description="Церемония награждения участников дистанции 1 километр"
@@ -134,7 +137,10 @@ const Schedule: FC = () => {
             description="Церемония награждения участников дистанции 5 километра"
           />
           <TableRow time="12:20" description="Разминка" />
-          <TableRow time="12:30" description="Старт на дистанцию 10 километров" />
+          <TableRow
+            time="12:30"
+            description="Старт на дистанцию 10 километров"
+          />
           <TableRow
             time="13:40"
             description="Церемония награждения участников дистанции 10 километров"
@@ -213,7 +219,7 @@ const Schedule: FC = () => {
             Положение о мероприятии
           </Link> */}
           <Button
-            fullWidth
+            fullWidth={matches ? false : true}
             sx={{
               mx: matches ? "56px" : "0px",
               background: "#E7352E",

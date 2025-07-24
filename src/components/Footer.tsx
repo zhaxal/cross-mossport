@@ -27,10 +27,11 @@ const Footer: FC = () => {
         pb="36px"
         pt={sm ? "220px" : "260px"}
         container
+        spacing="16px"
       >
         <Grid position="relative" item xs={sm ? 4 : 12}>
           <Box
-            width={sm ? "100%" : "75%"}
+            width={sm ? "100%" : "50%"}
             height="auto"
             component="img"
             sx={{
@@ -42,37 +43,35 @@ const Footer: FC = () => {
         </Grid>
         <Grid item xs={sm ? 8 : 12}>
           <Stack spacing="16px" px={!sm ? "0px" : "25px"}>
-            <Stack
-              spacing="30px"
-              justifyContent={md ? "normal" : "center"}
-              direction="row"
-            >
-              <a target="_blank" href="https://www.mos.ru/moskomsport/">
-                <Box
-                  height={md ? "55px" : sm ? "45px" : "25px"}
-                  component="img"
-                  src="/images/icons/dep_blue.svg"
-                />
-              </a>
-              <a target="_blank" href="https://sport.moscow/">
-                <Box
-                  height={md ? "55px" : sm ? "45px" : "25px"}
-                  component="img"
-                  src="/images/icons/mos_blue.svg"
-                />
-              </a>
+            <Stack spacing="16px" direction={!sm ? "column-reverse" : "column"}>
+              <Stack spacing="30px" direction="row">
+                <a target="_blank" href="https://www.mos.ru/moskomsport/">
+                  <Box
+                    height={md ? "55px" : sm ? "45px" : "25px"}
+                    component="img"
+                    src="/images/icons/dep_blue.svg"
+                  />
+                </a>
+                <a target="_blank" href="https://sport.moscow/">
+                  <Box
+                    height={md ? "55px" : sm ? "45px" : "25px"}
+                    component="img"
+                    src="/images/icons/mos_blue.svg"
+                  />
+                </a>
+              </Stack>
+              <Typography
+                sx={{
+                  maxWidth: !sm ? "75%" : "100%",
+                  fontFamily: "Gotham Pro Bold",
+                  fontSize: sm ? "32px" : "24px",
+                  color: "#26336A",
+                  lineHeight: sm ? "31px" : "23px",
+                }}
+              >
+                Массовый забег «Кросс нации»
+              </Typography>
             </Stack>
-            <Typography
-              sx={{
-                maxWidth: sm ? undefined : "340px",
-                fontFamily: "Gotham Pro Bold",
-                fontSize: sm ? "32px" : "24px",
-                color: "#26336A",
-                lineHeight: sm ? "31px" : "23px",
-              }}
-            >
-              Массовый забег «Кросс нации»
-            </Typography>
 
             <Stack spacing="16px">
               <Stack

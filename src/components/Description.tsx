@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { handleScrollToElement } from "@/utils/scroll";
 import {
   Box,
@@ -90,77 +91,70 @@ const DescriptionMobile: FC = () => {
 
   return (
     <Box
+      id="description"
+      pb="40px"
       sx={{
-        backgroundImage: "linear-gradient(to bottom, #0098D7, #88D8FC)",
+        backgroundImage: "url(/images/mobile/description.svg)",
+
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: small ? "center" : "right",
+        backgroundSize: "cover",
+
+        aspectRatio: "480/694",
       }}
     >
-      <Box
-        id="description"
-        sx={{
-          backgroundImage: "url(/images/mobile/description.svg)",
+      <Stack px="8px" pt={!small ? "128px" : "140px"} direction="row">
+        <Box width="50%">
+          <Box
+            width="100%"
+            component="img"
+            src="/images/description_logo.svg"
+          />
+        </Box>
 
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: small ? "center" : "right",
-          backgroundSize: "cover",
-
-          aspectRatio: "480/1257",
-        }}
-      >
-        <Stack px="8px" pt={!small ? "128px" : "140px"} direction="row">
-          <Box>
-            <Box
-              width="100%"
-              component="img"
-              src="/images/description_logo.svg"
-            />
-          </Box>
-
-          <Box px="10px">
-            <Typography
-              sx={{
-                mb: "16px",
-                textIndent: "32px",
-                maxWidth: "234px",
-                fontFamily: "Gotham Pro Regular",
-                fontSize: "16px",
-                color: "#0F2572",
-                lineHeight: "120%",
-              }}
-            >
-              15 июня в 5 парках столицы пройдет забег для детей и взрослых на
-              дистанциях 500 м, 1 км, 3 км, 5 км. Подойдет как новичкам, которые
-              хотят поучаствовать в массовом состязании, так и любителям,
-              которые хотят подготовиться к марафонам. Для самых уверенных в
-              себе будет доступна дистанция в 10 км на флагманской площадке на
-              стадионе «Авангард». <br />
-              <br />
-              Все на старт!
-            </Typography>
-          </Box>
-        </Stack>
-        <Stack pt="16px" direction="row" justifyContent="center">
-          <Button
-            onClick={handleScrollToElement("park")}
+        <Box px="10px">
+          <Typography
             sx={{
-              position: "relative",
-              background: "linear-gradient(90deg, #FFD324 0%, #FF8900 100%)",
-              boxShadow: "0px 4px 0px rgba(0, 0, 0, 0.16)",
-              borderRadius: "8px",
-              fontFamily: "Gotham Pro Bold",
+              mb: "16px",
+              textIndent: "32px",
+              maxWidth: "234px",
+              fontFamily: "Gotham Pro Regular",
               fontSize: "16px",
-              lineHeight: "152%",
-              color: "#31313E",
-              px: "20px",
-              py: "16px",
-              "& .MuiTouchRipple-root": {
-                color: "#FFFFFF", // Change this to the desired ripple color
-              },
+              color: "#0F2572",
+              lineHeight: "120%",
             }}
           >
-            РЕЗУЛЬТАТЫ
-          </Button>
-        </Stack>
-        <Stack alignItems="center" pt="42px" px="60px">
+            13 сентября 2025 года в Крылатском пройдет ассовый забег в рамках
+            Всероссийского дня бега “Кросс нации” для взрослых и детей на
+            дистанциях 1 км, 5 км и 10 км. Подойдет как новичкам, которые хотят
+            поучаствовать в массовом состязании, так и любителям, которые хотят
+            подготовиться к марафонам.
+          </Typography>
+        </Box>
+      </Stack>
+      <Stack pt="16px" direction="row" justifyContent="center">
+        <Button
+          onClick={handleScrollToElement("park")}
+          sx={{
+            position: "relative",
+            bgcolor: "#E7352E",
+            boxShadow: "0px 4px 0px rgba(0, 0, 0, 0.16)",
+            borderRadius: "8px",
+            fontFamily: "Gotham Pro Bold",
+            fontSize: "16px",
+            lineHeight: "152%",
+            color: "#FFFFFF",
+            px: "20px",
+            py: "16px",
+            "& .MuiTouchRipple-root": {
+              color: "#FFFFFF", // Change this to the desired ripple color
+            },
+          }}
+        >
+          ЗАРЕГИСТРИРОВАТЬСЯ
+        </Button>
+      </Stack>
+      {/* <Stack alignItems="center" pt="42px" px="60px">
           <Typography
             sx={{
               maxWidth: "350px",
@@ -197,8 +191,7 @@ const DescriptionMobile: FC = () => {
             component="img"
             src="/images/medal.svg"
           />
-        </Stack>
-      </Box>
+        </Stack> */}
     </Box>
   );
 };
