@@ -166,7 +166,7 @@ const Guide: FC = () => {
               <Typography
                 sx={{
                   fontFamily: "Gotham Pro Regular",
-                  fontSize: "20px",
+                  fontSize: sm ? "20px" : "16px",
                   lineHeight: "120%",
                   color: "#FFFFFF",
                 }}
@@ -224,7 +224,7 @@ const Guide: FC = () => {
                   component="p"
                   sx={{
                     fontFamily: "Gotham Pro Medium",
-                    fontSize: sm ? "20px" : "14px",
+                    fontSize: sm ? "20px" : "16px",
                     lineHeight: "120%",
                     color: "#FFFFFF",
                   }}
@@ -241,7 +241,7 @@ const Guide: FC = () => {
                     component="li"
                     sx={{
                       fontFamily: "Gotham Pro Medium",
-                      fontSize: sm ? "20px" : "14px",
+                      fontSize: sm ? "20px" : "16px",
                       lineHeight: "120%",
                       color: "#FFFFFF",
                       marginBottom: "8px",
@@ -254,7 +254,7 @@ const Guide: FC = () => {
                     component="li"
                     sx={{
                       fontFamily: "Gotham Pro Medium",
-                      fontSize: sm ? "20px" : "14px",
+                      fontSize: sm ? "20px" : "16px",
                       lineHeight: "120%",
                       color: "#FFFFFF",
                       marginBottom: "8px",
@@ -268,7 +268,7 @@ const Guide: FC = () => {
                     component="li"
                     sx={{
                       fontFamily: "Gotham Pro Medium",
-                      fontSize: sm ? "20px" : "14px",
+                      fontSize: sm ? "20px" : "16px",
                       lineHeight: "120%",
                       color: "#FFFFFF",
                       marginBottom: "8px",
@@ -281,7 +281,7 @@ const Guide: FC = () => {
                   component="p"
                   sx={{
                     fontFamily: "Gotham Pro Medium",
-                    fontSize: sm ? "20px" : "14px",
+                    fontSize: sm ? "20px" : "16px",
                     lineHeight: "120%",
                     color: "#FFFFFF",
                   }}
@@ -294,7 +294,7 @@ const Guide: FC = () => {
                   sx={{
                     mt: "16px",
                     fontFamily: "Gotham Pro Regular",
-                    fontSize: sm ? "20px" : "14px",
+                    fontSize: sm ? "20px" : "16px",
                     fontStyle: "italic",
                     lineHeight: "120%",
                     color: "#FFFFFF",
@@ -315,7 +315,7 @@ const Guide: FC = () => {
               <Typography
                 sx={{
                   fontFamily: "Gotham Pro Medium",
-                  fontSize: md ? "32px" : "24px",
+                  fontSize: sm ? "20px" : "16px",
                   lineHeight: "120%",
                   color: "#FFFFFF",
                 }}

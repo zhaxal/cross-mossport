@@ -12,7 +12,6 @@ const Cover: FC = () => {
       <Container maxWidth="lg">
         <Box
           sx={{
-            backgroundColor: "#0F2572",
             minHeight: "96px",
           }}
         ></Box>
@@ -25,7 +24,6 @@ const Cover: FC = () => {
         <Container maxWidth="lg">
           <Box
             sx={{
-              backgroundColor: "#0F2572",
               backgroundImage: "url(/images/cover.png)",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
