@@ -134,7 +134,7 @@ const Schedule: FC = () => {
           <TableRow time="11:30" description="Разминка" />
           <TableRow
             time="12:10"
-            description="Церемония награждения участников дистанции 5 километра"
+            description="Церемония награждения участников дистанции 5 километров"
           />
           <TableRow time="12:20" description="Разминка" />
           <TableRow

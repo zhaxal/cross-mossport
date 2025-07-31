@@ -8,7 +8,7 @@ function ImagePlace() {
       }}
     >
       <Container maxWidth="lg">
-        <Box component="img" src="/images/running.png" alt="Description" />
+        <Box component="img" src="/images/deti.jpg" alt="Description" />
       </Container>
     </Box>
   );

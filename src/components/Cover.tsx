@@ -42,11 +42,19 @@ const Cover: FC = () => {
           alignItems="center"
           direction="row"
         >
-          <a target="_blank" href="https://mosgorsport.ru/">
+          {/* <a target="_blank" href="https://mosgorsport.ru/">
             <Box
               height={matches ? "65px" : small ? "45px" : "25px"}
               component="img"
               src="/images/icons/mgs.svg"
+            />
+          </a> */}
+
+          <a target="_blank" href="https://www.mos.ru/moskomsport/">
+            <Box
+              height={matches ? "65px" : small ? "45px" : "25px"}
+              component="img"
+              src="/images/icons/dsgm.svg"
             />
           </a>
 
@@ -57,14 +65,6 @@ const Cover: FC = () => {
               src="/images/icons/ms.svg"
             />
           </a>
-
-          {/* <a target="_blank" href="https://www.mos.ru/moskomsport/">
-          <Box
-            height={matches ? "65px" : small ? "45px" : "25px"}
-            component="img"
-            src="/images/icons/dsgm.svg"
-          />
-        </a> */}
         </Stack>
       </Container>
     </>

@@ -89,7 +89,7 @@ const DesktopNavbar: FC = () => {
 
   return (
     <HideOnScroll>
-      <AppBar sx={{ background: "none", boxShadow: "none" }}>
+      <AppBar sx={{ background: "#FFFFFF", boxShadow: "none" }}>
         {md && (
           <Container maxWidth="lg">
             <Toolbar sx={{ background: "#FFFFFF", height: "96px" }}>
