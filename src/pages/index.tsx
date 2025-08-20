@@ -37,7 +37,7 @@ export default function Preview() {
 
           <Container maxWidth="lg">
             {/* <Distance /> */}
-            <Schedule />
+            {/* <Schedule /> */}
             <Guide />
             {/* <Park /> */}
             <Photo />
@@ -65,7 +65,7 @@ export default function Preview() {
           <Description />
           <ImagePlace />
 
-          <Schedule />
+          {/* <Schedule /> */}
           <Guide />
 
           <Photo />
