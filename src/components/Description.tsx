@@ -14,6 +14,7 @@ import { FC } from "react";
 const DescriptionDesktop: FC = () => {
   const theme = useTheme();
   const large = useMediaQuery(theme.breakpoints.up("lg"));
+  const matches = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
     <Box
@@ -56,7 +57,7 @@ const DescriptionDesktop: FC = () => {
               так и любителям, которые хотят подготовиться к марафонам.
             </Typography>
             <Stack px="50px" justifyContent="center">
-              <Button
+              {/* <Button
                 onClick={handleScrollToElement("park")}
                 sx={{
                   position: "relative",
@@ -78,6 +79,41 @@ const DescriptionDesktop: FC = () => {
                 }}
               >
                 РЕЗУЛЬТАТЫ
+              </Button> */}
+              <Button
+                fullWidth={matches ? false : true}
+                onClick={() => {
+                  const link =
+                    "https://grom.place/competitions/kross-nacii-2025";
+
+                  window.open(link, "_blank");
+                }}
+                sx={{
+                  mx: matches ? "56px" : "0px",
+                  background: "#E7352E",
+                  borderRadius: "8px",
+                  px: "40px",
+                  py: "20px",
+                  color: "#FFFFFF",
+                  "& .MuiTouchRipple-root": {
+                    color: "#FFFFFF", // Change this to the desired ripple color
+                  },
+                  ":hover": {
+                    color: "#E7352E",
+
+                    border: "1px solid #E7352E",
+                  },
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontFamily: "Gotham Pro Bold",
+                    fontSize: "18px",
+                    lineHeight: "152%",
+                  }}
+                >
+                  ЗАРЕГИСТРИРОВАТЬСЯ
+                </Typography>
               </Button>
             </Stack>
           </Box>

@@ -215,8 +215,14 @@ const Schedule: FC = () => {
               borderRadius: "8px",
               px: "40px",
               py: "20px",
+              color: "#FFFFFF",
               "& .MuiTouchRipple-root": {
                 color: "#FFFFFF", // Change this to the desired ripple color
+              },
+              ":hover": {
+                color: "#E7352E",
+
+                border: "1px solid #E7352E",
               },
             }}
           >
@@ -225,7 +231,6 @@ const Schedule: FC = () => {
                 fontFamily: "Gotham Pro Bold",
                 fontSize: "18px",
                 lineHeight: "152%",
-                color: "#FFFFFF",
               }}
             >
               ЗАРЕГИСТРИРОВАТЬСЯ

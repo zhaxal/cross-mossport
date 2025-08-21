@@ -23,7 +23,7 @@ function Find() {
       <Stack spacing="40px" direction={sm ? "row" : "column-reverse"}>
         <Box
           component="iframe"
-          src="https://yandex.com/map-widget/v1/?um=constructor%3Ad4445ea405fa54c9148340a7de87f7a4b9df164b35ff2fe504cf79adc1fab55c&amp;source=constructor"
+          src="https://yandex.com/map-widget/v1/?um=constructor%3Aa91e31f85a66e709918147a9d9ce025f11bc3be1f0860f1e83552186944ef610&amp;source=constructor"
           height="500px"
           width={sm ? "50%" : "100%"}
         />
@@ -46,9 +46,10 @@ function Find() {
               fontSize: sm ? "20px" : "24px",
               color: "#26336A",
               lineHeight: sm ? "19px" : "23px",
+              textDecoration: "underline",
             }}
           >
-            Крылатская улица дом 2а
+            г. Москва, ул. Крылатская, 10
           </Typography>
         </Stack>
       </Stack>

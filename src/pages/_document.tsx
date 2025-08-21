@@ -16,10 +16,7 @@ export default function Document() {
         />
         <meta property="og:url" content="https://cross.sport.mos.ru/" />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://cross.sport.mos.ru/og-image.jpg"
-        />
+        <meta property="og:image" content="/cross_preview.jpg" />
       </Head>
       <body className="antialiased">
         <div
@@ -38,7 +35,7 @@ export default function Document() {
           </div>
           <div itemScope itemType="https://schema.org/ImageObject">
             <img
-              src="https://cross.sport.mos.ru/og-image.jpg"
+              src="/cross_preview.jpg"
               itemProp="contentUrl"
               alt="Кросс Нации 2025"
             />
