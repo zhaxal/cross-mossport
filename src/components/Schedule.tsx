@@ -112,40 +112,25 @@ const Schedule: FC = () => {
           px={matches ? (medium ? "210px" : "20px") : "20px"}
           spacing="8px"
         >
+          <TableRow time="15:00" description="Открытие стартового городка" />
           <TableRow
-            time="09:00"
-            description="Начало выдачи стартовых номеров (до 11:45)"
+            time="15:00"
+            description="Начало выдачи стартовых комплектов"
           />
           <TableRow
-            time="10:00"
-            description="Торжественное открытие соревнований"
+            time="16:00"
+            description="Старт детских забегов на 200 м и 1 км"
           />
-          <TableRow time="10:20" description="Разминка" />
-          <TableRow time="10:30" description="Старт на дистанцию 1 километр" />
-          <TableRow time="10:50" description="Разминка" />
+          <TableRow time="17:00" description="Старт забега на дистанцию 5 км" />
           <TableRow
-            time="11:00"
-            description="Старт на дистанцию 5 километров"
+            time="18:30"
+            description="Старт забега участников на дистанции 10 км"
           />
           <TableRow
-            time="11:20"
-            description="Церемония награждения участников дистанции 1 километр"
+            time="20:00"
+            description="Награждение победителей и торжественная часть"
           />
-          <TableRow time="11:30" description="Разминка" />
-          <TableRow
-            time="12:10"
-            description="Церемония награждения участников дистанции 5 километров"
-          />
-          <TableRow time="12:20" description="Разминка" />
-          <TableRow
-            time="12:30"
-            description="Старт на дистанцию 10 километров"
-          />
-          <TableRow
-            time="13:40"
-            description="Церемония награждения участников дистанции 10 километров"
-          />
-          <TableRow time="13:50" description="Закрытие мероприятия" />
+          <TableRow time="21:00" description="Окончание мероприятия" />
         </Stack>
 
         {/* <Typography
@@ -198,7 +183,6 @@ const Schedule: FC = () => {
         </Stack> */}
 
         <Stack
-
           justifyContent={matches ? "flex-end" : "centesdr"}
           px={matches ? "210px" : "20px"}
           alignItems="center"
@@ -220,6 +204,11 @@ const Schedule: FC = () => {
           </Link> */}
           <Button
             fullWidth={matches ? false : true}
+            onClick={() => {
+              const link = "https://grom.place/competitions/kross-nacii-2025";
+
+              window.open(link, "_blank");
+            }}
             sx={{
               mx: matches ? "56px" : "0px",
               background: "#E7352E",
@@ -232,7 +221,6 @@ const Schedule: FC = () => {
             }}
           >
             <Typography
-              onClick={handleScrollToElement("park")}
               sx={{
                 fontFamily: "Gotham Pro Bold",
                 fontSize: "18px",

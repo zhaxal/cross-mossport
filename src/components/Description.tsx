@@ -72,6 +72,9 @@ const DescriptionDesktop: FC = () => {
                   "& .MuiTouchRipple-root": {
                     color: "#FFFFFF", // Change this to the desired ripple color
                   },
+                  ":hover":  {
+                    color: "#E7352E"
+                  }
                 }}
               >
                 РЕЗУЛЬТАТЫ

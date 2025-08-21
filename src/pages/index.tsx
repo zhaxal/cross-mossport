@@ -18,6 +18,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+import Head from "next/head";
 
 export default function Preview() {
   const theme = useTheme();
@@ -25,6 +26,9 @@ export default function Preview() {
 
   return (
     <>
+      <Head>
+        <title>Кросс нации 2025</title>
+      </Head>
       <CssBaseline />
       <Navbar />
       {matches && (
@@ -37,7 +41,7 @@ export default function Preview() {
 
           <Container maxWidth="lg">
             {/* <Distance /> */}
-            {/* <Schedule /> */}
+            <Schedule />
             <Guide />
             {/* <Park /> */}
             <Photo />
@@ -65,7 +69,7 @@ export default function Preview() {
           <Description />
           <ImagePlace />
 
-          {/* <Schedule /> */}
+          <Schedule />
           <Guide />
 
           <Photo />
