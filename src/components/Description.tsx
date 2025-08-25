@@ -171,7 +171,11 @@ const DescriptionMobile: FC = () => {
       </Stack>
       <Stack pt="16px" direction="row" justifyContent="center">
         <Button
-          onClick={handleScrollToElement("park")}
+          onClick={() => {
+            const link = "https://grom.place/competitions/kross-nacii-2025";
+
+            window.open(link, "_blank");
+          }}
           sx={{
             position: "relative",
             bgcolor: "#E7352E",
