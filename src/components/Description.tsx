@@ -167,7 +167,7 @@ const DescriptionMobile: FC = () => {
               textAlign: "justify",
             }}
           >
-            <Box component="span" sx={{ fontWeight: "bold" }}>
+            <Box component="span" sx={{ fontWeight: "bold", color: "#E7352E" }}>
               13 сентября 2025 года
             </Box>{" "}
             в Крылатском пройдет массовый забег «Кросс нации» для взрослых и
