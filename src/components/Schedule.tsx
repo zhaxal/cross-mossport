@@ -78,7 +78,7 @@ const Schedule: FC = () => {
           backgroundRepeat: "no-repeat",
           backgroundPosition: matches ? "center" : "bottom",
           backgroundSize: "cover",
-          aspectRatio: matches ? "1070/866" : sm ? "480/600" : "480/1257",
+        
         }}
       >
         <Typography

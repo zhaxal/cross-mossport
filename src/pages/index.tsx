@@ -6,6 +6,7 @@ import Find from "@/components/Find";
 import Footer from "@/components/Footer";
 import Guide from "@/components/Guide";
 import ImagePlace from "@/components/ImagePlace";
+import Maps from "@/components/Maps";
 import Navbar from "@/components/Navbar";
 import Park from "@/components/Park";
 import Photo from "@/components/Photo";
@@ -42,6 +43,7 @@ export default function Preview() {
           <Container maxWidth="lg">
             {/* <Distance /> */}
             <Schedule />
+            <Maps />
             <Guide />
             {/* <Park /> */}
             <Photo />
@@ -70,6 +72,8 @@ export default function Preview() {
           <ImagePlace />
 
           <Schedule />
+
+          <Maps />
           <Guide />
 
           <Photo />
