@@ -16,6 +16,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FullscreenIcon from "@mui/icons-material/Fullscreen";
 import CloseIcon from "@mui/icons-material/Close";
 import { FC, useEffect, useState } from "react";
+import { title } from "process";
 
 function Maps() {
   const theme = useTheme();
@@ -55,6 +56,11 @@ function Maps() {
       title: "Схема дистанции 10 км",
       image: "/images/10km.jpeg", // замените на актуальную схему
     },
+    {
+      id: "panel4",
+      title: "Cхема стартового городка",
+      image: "/images/scheme.jpg", // замените на актуальную схему
+    }
   ];
 
   return (

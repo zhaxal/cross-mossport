@@ -1,5 +1,6 @@
 import { Box, Container, Stack, useMediaQuery, useTheme } from "@mui/material";
 import { FC } from "react";
+import Image from "next/image";
 
 const Cover: FC = () => {
   const theme = useTheme();
@@ -24,13 +25,18 @@ const Cover: FC = () => {
         <Container maxWidth="lg">
           <Box
             sx={{
-              backgroundImage: "url(/images/cover.png)",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
+              position: "relative",
               aspectRatio: "480/320",
             }}
-          ></Box>
+          >
+            <Image
+              src="/images/cover.png"
+              alt="Cover image"
+              fill
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </Box>
         </Container>
       </Box>
       <Container maxWidth="lg">
@@ -51,18 +57,22 @@ const Cover: FC = () => {
           </a> */}
 
           <a target="_blank" href="https://www.mos.ru/moskomsport/">
-            <Box
-              height={matches ? "65px" : small ? "45px" : "25px"}
-              component="img"
+            <Image
               src="/images/icons/dsgm.svg"
+              alt="Department of Sports and Tourism of Moscow"
+              width={matches ? 65 : small ? 45 : 25}
+              height={matches ? 65 : small ? 45 : 25}
+              style={{ height: "auto" }}
             />
           </a>
 
           <a target="_blank" href="https://sport.moscow">
-            <Box
-              height={matches ? "65px" : small ? "45px" : "25px"}
-              component="img"
+            <Image
               src="/images/icons/ms.svg"
+              alt="Moscow Sports"
+              width={matches ? 65 : small ? 45 : 25}
+              height={matches ? 65 : small ? 45 : 25}
+              style={{ height: "auto" }}
             />
           </a>
         </Stack>
