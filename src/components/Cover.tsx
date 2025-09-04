@@ -60,8 +60,8 @@ const Cover: FC = () => {
             <Image
               src="/images/icons/dsgm.svg"
               alt="Department of Sports and Tourism of Moscow"
-              width={matches ? 65 : small ? 45 : 25}
-              height={matches ? 65 : small ? 45 : 25}
+              width={matches ? 150 : small ? 120 : 80}
+              height={matches ? 150 : small ? 120 : 80}
               style={{ height: "auto" }}
             />
           </a>
@@ -70,8 +70,8 @@ const Cover: FC = () => {
             <Image
               src="/images/icons/ms.svg"
               alt="Moscow Sports"
-              width={matches ? 65 : small ? 45 : 25}
-              height={matches ? 65 : small ? 45 : 25}
+              width={matches ? 150 : small ? 120 : 80}
+              height={matches ? 150 : small ? 120 : 80}
               style={{ height: "auto" }}
             />
           </a>
