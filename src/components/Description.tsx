@@ -123,6 +123,54 @@ const DescriptionDesktop: FC = () => {
           </Box>
         </Stack>
       </Box>
+      <Box
+        sx={{
+  
+          py: "40px",
+          px: large ? "167px" : "40px",
+        }}
+      >
+        <Typography
+          sx={{
+            fontFamily: "Gotham Pro Medium",
+            fontSize: large ? "20px" : "16px",
+            color: "#0F2572",
+            lineHeight: "140%",
+            textAlign: "center",
+            mb: "20px",
+          }}
+        >
+          <Box component="span" sx={{ fontWeight: "bold", color: "#E7352E" }}>
+            Выдача стартовых номеров только ПРЕДВАРИТЕЛЬНАЯ!
+          </Box>{" "}
+          По адресу: Москва, ул. Крылатская, д.16с2
+        </Typography>
+        <Typography
+          sx={{
+            fontFamily: "Gotham Pro Medium",
+            fontSize: large ? "18px" : "14px",
+            color: "#0F2572",
+            lineHeight: "140%",
+            textAlign: "center",
+            mb: "10px",
+          }}
+        >
+          11 сентября с 13:00 до 21:00<br />
+          12 сентября с 13:00 до 21:00
+        </Typography>
+        <Typography
+          sx={{
+            fontFamily: "Gotham Pro Bold",
+            fontSize: large ? "18px" : "14px",
+            color: "#E7352E",
+            lineHeight: "140%",
+            textAlign: "center",
+            fontWeight: "bold",
+          }}
+        >
+          Выдачи стартовых номеров в день старта НЕ БУДЕТ!
+        </Typography>
+      </Box>
     </Box>
   );
 };
@@ -132,115 +180,125 @@ const DescriptionMobile: FC = () => {
   // const medium = useMediaQuery("(min-width:1100px)");
 
   return (
-    <Box
-      id="description"
-      pb="40px"
-      sx={{
-        backgroundImage: "url(/images/mobile/description.svg)",
+    <Box>
+      <Box
+        id="description"
+        pb="40px"
+        sx={{
+          backgroundImage: "url(/images/mobile/description.svg)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: small ? "center" : "right",
+          backgroundSize: "cover",
+          aspectRatio: "480/694",
+        }}
+      >
+        <Stack px="8px" pt={!small ? "128px" : "140px"} direction="row">
+          <Box width="50%">
+            <Box
+              width="100%"
+              component="img"
+              src="/images/description_logo.svg"
+            />
+          </Box>
 
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: small ? "center" : "right",
-        backgroundSize: "cover",
+          <Box px="10px">
+            <Typography
+              sx={{
+                mb: "16px",
+                textIndent: "32px",
+                maxWidth: "234px",
+                fontFamily: "Gotham Pro Regular",
+                fontSize: "16px",
+                color: "#0F2572",
+                lineHeight: "120%",
+                textAlign: "justify",
+              }}
+            >
+              <Box component="span" sx={{ fontWeight: "bold", color: "#E7352E" }}>
+                13 сентября 2025 года
+              </Box>{" "}
+              в Крылатском пройдет массовый забег «Кросс нации» для взрослых и
+              детей на дистанциях 1 км, 5 км и 10 км. Забег подходит, как
+              новичкам, которые хотят проверить свои силы, так и любителям,
+              которые хотят подготовиться к марафонам
+            </Typography>
+          </Box>
+        </Stack>
+        <Stack pt="16px" direction="row" justifyContent="center">
+          <Button
+            onClick={() => {
+              const link = "https://grom.place/competitions/kross-nacii-2025";
 
-        aspectRatio: "480/694",
-      }}
-    >
-      <Stack px="8px" pt={!small ? "128px" : "140px"} direction="row">
-        <Box width="50%">
-          <Box
-            width="100%"
-            component="img"
-            src="/images/description_logo.svg"
-          />
-        </Box>
-
-        <Box px="10px">
-          <Typography
+              window.open(link, "_blank");
+            }}
             sx={{
-              mb: "16px",
-              textIndent: "32px",
-              maxWidth: "234px",
-              fontFamily: "Gotham Pro Regular",
+              position: "relative",
+              bgcolor: "#E7352E",
+              boxShadow: "0px 4px 0px rgba(0, 0, 0, 0.16)",
+              borderRadius: "8px",
+              fontFamily: "Gotham Pro Bold",
               fontSize: "16px",
-              color: "#0F2572",
-              lineHeight: "120%",
-              textAlign: "justify",
+              lineHeight: "152%",
+              color: "#FFFFFF",
+              px: "20px",
+              py: "16px",
+              "& .MuiTouchRipple-root": {
+                color: "#FFFFFF", // Change this to the desired ripple color
+              },
             }}
           >
-            <Box component="span" sx={{ fontWeight: "bold", color: "#E7352E" }}>
-              13 сентября 2025 года
-            </Box>{" "}
-            в Крылатском пройдет массовый забег «Кросс нации» для взрослых и
-            детей на дистанциях 1 км, 5 км и 10 км. Забег подходит, как
-            новичкам, которые хотят проверить свои силы, так и любителям,
-            которые хотят подготовиться к марафонам
-          </Typography>
-        </Box>
-      </Stack>
-      <Stack pt="16px" direction="row" justifyContent="center">
-        <Button
-          onClick={() => {
-            const link = "https://grom.place/competitions/kross-nacii-2025";
-
-            window.open(link, "_blank");
-          }}
+            ЗАРЕГИСТРИРОВАТЬСЯ
+          </Button>
+        </Stack>
+      </Box>
+      <Box
+        sx={{
+     
+          py: "20px",
+          px: "16px",
+        }}
+      >
+        <Typography
           sx={{
-            position: "relative",
-            bgcolor: "#E7352E",
-            boxShadow: "0px 4px 0px rgba(0, 0, 0, 0.16)",
-            borderRadius: "8px",
-            fontFamily: "Gotham Pro Bold",
-            fontSize: "16px",
-            lineHeight: "152%",
-            color: "#FFFFFF",
-            px: "20px",
-            py: "16px",
-            "& .MuiTouchRipple-root": {
-              color: "#FFFFFF", // Change this to the desired ripple color
-            },
+            fontFamily: "Gotham Pro Medium",
+            fontSize: "14px",
+            color: "#0F2572",
+            lineHeight: "140%",
+            textAlign: "center",
+            mb: "12px",
           }}
         >
-          ЗАРЕГИСТРИРОВАТЬСЯ
-        </Button>
-      </Stack>
-      {/* <Stack alignItems="center" pt="42px" px="60px">
-          <Typography
-            sx={{
-              maxWidth: "350px",
-              fontFamily: "Gotham Pro Bold",
-              fontSize: "24px",
-              color: "#0F2572",
-              lineHeight: "23px",
-              textAlign: "center",
-            }}
-          >
-            Все участники получат дипломы и медаль финишера, а победители и
-            призеры - медали и памятные призы
-          </Typography>
-
-          <Link
-            target="_blank"
-            href="https://disk.yandex.ru/d/rfFIi_cmXKRnrw"
-            sx={{
-              fontFamily: "Gotham Pro Bold",
-              fontSize: "18px",
-              lineHeight: "152%",
-              color: "#0461B5",
-              textDecoration: "underline",
-            }}
-          >
-            <br />
-            Положение о мероприятии
-          </Link>
-        </Stack>
-        <Stack px="64px" pt="42px" alignItems="center">
-          <Box
-            width="100%"
-            height="auto"
-            component="img"
-            src="/images/medal.svg"
-          />
-        </Stack> */}
+          <Box component="span" sx={{ fontWeight: "bold", color: "#E7352E" }}>
+            Выдача стартовых номеров только ПРЕДВАРИТЕЛЬНАЯ!
+          </Box>{" "}
+          По адресу: Москва, ул. Крылатская, д.16с2
+        </Typography>
+        <Typography
+          sx={{
+            fontFamily: "Gotham Pro Medium",
+            fontSize: "12px",
+            color: "#0F2572",
+            lineHeight: "140%",
+            textAlign: "center",
+            mb: "8px",
+          }}
+        >
+          11 сентября с 13:00 до 21:00<br />
+          12 сентября с 13:00 до 21:00
+        </Typography>
+        <Typography
+          sx={{
+            fontFamily: "Gotham Pro Bold",
+            fontSize: "12px",
+            color: "#E7352E",
+            lineHeight: "140%",
+            textAlign: "center",
+            fontWeight: "bold",
+          }}
+        >
+          Выдачи стартовых номеров в день старта НЕ БУДЕТ!
+        </Typography>
+      </Box>
     </Box>
   );
 };
