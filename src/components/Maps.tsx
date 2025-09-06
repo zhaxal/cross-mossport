@@ -23,6 +23,7 @@ function Maps() {
   const lg = useMediaQuery(theme.breakpoints.up("xs"));
   const md = useMediaQuery("(min-width:1100px)");
   const sm = useMediaQuery("(min-width:480px)");
+  const matches = useMediaQuery(theme.breakpoints.up("md"));
 
   const [expanded, setExpanded] = useState<string | false>(false);
   const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
@@ -42,25 +43,10 @@ function Maps() {
 
   const distanceData = [
     {
-      id: "panel1",
-      title: "Схема дистанции 1 км",
-      image: "/images/1km.jpeg", // замените на актуальную схему
-    },
-    {
-      id: "panel2",
-      title: "Схема дистанции 5 км",
-      image: "/images/5km.jpeg", // замените на актуальную схему
-    },
-    {
-      id: "panel3",
-      title: "Схема дистанции 10 км",
-      image: "/images/10km.jpeg", // замените на актуальную схему
-    },
-    {
       id: "panel4",
       title: "Cхема стартового городка",
       image: "/images/scheme.jpg", // замените на актуальную схему
-    }
+    },
   ];
 
   return (
@@ -163,6 +149,43 @@ function Maps() {
               </AccordionDetails>
             </Accordion>
           ))}
+        </Box>
+        {/* Add Button below accordion */}
+        <Box display="flex" justifyContent="center" mt={2}>
+          <Button
+            fullWidth={matches ? false : true}
+            onClick={() => {
+              const link = "https://nakarte.me/#m=16/55.76641/37.43413&l=S&nktl=qkfDy_CAnfSxSNS-pHVIzw";
+
+              window.open(link, "_blank");
+            }}
+            sx={{
+              mx: matches ? "56px" : "0px",
+              background: "#E7352E",
+              borderRadius: "8px",
+              px: "40px",
+              py: "20px",
+              color: "#FFFFFF",
+              "& .MuiTouchRipple-root": {
+                color: "#FFFFFF", // Change this to the desired ripple color
+              },
+              ":hover": {
+                color: "#E7352E",
+
+                border: "1px solid #E7352E",
+              },
+            }}
+          >
+            <Typography
+              sx={{
+                fontFamily: "Gotham Pro Bold",
+                fontSize: "18px",
+                lineHeight: "152%",
+              }}
+            >
+              схемы дистанций 
+            </Typography>
+          </Button>
         </Box>
       </Box>
 
