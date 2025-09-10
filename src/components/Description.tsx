@@ -133,6 +133,20 @@ const DescriptionDesktop: FC = () => {
       >
         <Typography
           sx={{
+            fontFamily: "Gotham Pro Bold",
+            fontSize: large ? "48px" : "32px",
+            color: "#E7352E",
+            lineHeight: "140%",
+            textAlign: "center",
+            fontWeight: "bold",
+            mb: "24px",
+            textTransform: "uppercase",
+          }}
+        >
+          РЕГИСТРАЦИЯ ЗАКРЫТА
+        </Typography>
+        <Typography
+          sx={{
             fontFamily: "Gotham Pro Medium",
             fontSize: large ? "20px" : "16px",
             color: "#0F2572",
