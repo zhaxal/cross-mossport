@@ -116,7 +116,8 @@ const DescriptionDesktop: FC = () => {
                     lineHeight: "152%",
                   }}
                 >
-                  ЗАРЕГИСТРИРОВАТЬСЯ
+                  {/* ЗАРЕГИСТРИРОВАТЬСЯ */}
+                  РЕГИСТРАЦИЯ ЗАКРЫТА
                 </Typography>
               </Button>
             </Stack>
@@ -247,7 +248,8 @@ const DescriptionMobile: FC = () => {
               },
             }}
           >
-            ЗАРЕГИСТРИРОВАТЬСЯ
+            {/* ЗАРЕГИСТРИРОВАТЬСЯ */}
+            РЕГИСТРАЦИЯ ЗАКРЫТА
           </Button>
         </Stack>
       </Box>

@@ -233,7 +233,8 @@ const Schedule: FC = () => {
                 lineHeight: "152%",
               }}
             >
-              ЗАРЕГИСТРИРОВАТЬСЯ
+              {/* ЗАРЕГИСТРИРОВАТЬСЯ */}
+              РЕГИСТРАЦИЯ ЗАКРЫТА
             </Typography>
           </Button>
         </Stack>
