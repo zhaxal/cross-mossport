@@ -255,11 +255,24 @@ const DescriptionMobile: FC = () => {
       </Box>
       <Box
         sx={{
-     
           py: "20px",
           px: "16px",
         }}
       >
+        <Typography
+          sx={{
+            fontFamily: "Gotham Pro Bold",
+            fontSize: "24px",
+            color: "#E7352E",
+            lineHeight: "140%",
+            textAlign: "center",
+            fontWeight: "bold",
+            mb: "16px",
+            textTransform: "uppercase",
+          }}
+        >
+          РЕГИСТРАЦИЯ ЗАКРЫТА
+        </Typography>
         <Typography
           sx={{
             fontFamily: "Gotham Pro Medium",
