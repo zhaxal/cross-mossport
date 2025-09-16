@@ -28,9 +28,9 @@ export default function Preview() {
   const matches = useMediaQuery(theme.breakpoints.up("md"));
   const [snackbarOpen, setSnackbarOpen] = useState(false);
 
-  useEffect(() => {
-    setSnackbarOpen(true);
-  }, []);
+  // useEffect(() => {
+  //   setSnackbarOpen(true);
+  // }, []);
 
   const handleSnackbarClose = () => {
     setSnackbarOpen(false);
@@ -44,7 +44,7 @@ export default function Preview() {
       <CssBaseline />
       <Navbar />
 
-      <Snackbar
+      {/* <Snackbar
         open={snackbarOpen}
         onClose={handleSnackbarClose}
         autoHideDuration={null}
@@ -76,7 +76,7 @@ export default function Preview() {
           Специально для болельщиков и участников забега 13 сентября с 15:00 до 21:00 каждые 10 минут будут курсировать шаттлы.
           Маршрут: м. Крылатское (выход 5) Крылатские холмы 21 - Ледовый дворец и обратно.`}
         </Alert>
-      </Snackbar>
+      </Snackbar> */}
 
       {matches && (
         <>

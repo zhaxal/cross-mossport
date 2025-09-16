@@ -71,7 +71,7 @@ const Photo: FC = () => {
             .slice(0, md ? 12 : sm ? 6 : 3)}
         </Grid>
 
-        {/* <Box
+        <Box
           sx={{
             alignItems: "center",
             display: "flex",
@@ -81,7 +81,7 @@ const Photo: FC = () => {
         >
           <Button
             target="_blank"
-            href="https://disk.yandex.ru/d/wz42WKkLsQqODw"
+            href="https://disk.yandex.ru/d/X0OMaCy8S4Gxdw"
             sx={{
               background: "linear-gradient(90deg, #FFD324 0%, #FF8900 100%)",
               boxShadow: "0px 4px 0px rgba(0, 0, 0, 0.16)",
@@ -98,7 +98,7 @@ const Photo: FC = () => {
           >
             ФОТО
           </Button>
-        </Box> */}
+        </Box>
       </Box>
     </Box>
   );
